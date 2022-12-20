@@ -14,6 +14,9 @@ public class BasicNavigations {
         //This is the line opening an empty browser
         WebDriver driver=new ChromeDriver();
 
+        //This line will maximize the browser size
+        driver.manage().window().maximize();
+
         //3- Go to "https://www.tesla.com"
        driver.get("https://www.tesla.com");
 

@@ -8,6 +8,7 @@ public class SeleniumTest {
     public static void main(String[] args) {
 
         //1-Setting up web driver manager
+        //We create our "Browser Driver"
         WebDriverManager.chromedriver().setup();
 
         //2-Crate instance of the chrome driver

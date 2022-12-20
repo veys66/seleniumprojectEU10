@@ -42,9 +42,10 @@ public class BasicNavigations {
         driver.navigate().to("https://www.google.com");
 
         //get the title of the page
-        System.out.println("driver.getTitle()= " + driver.getTitle());
+        //System.out.println("driver.getTitle()= " + driver.getTitle());
 
         String currentTitle = driver.getTitle();
+        System.out.println("currentTitle = " + currentTitle);
 
 
 

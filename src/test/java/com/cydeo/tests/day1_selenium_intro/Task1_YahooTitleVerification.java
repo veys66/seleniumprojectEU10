@@ -30,7 +30,7 @@ public class Task1_YahooTitleVerification {
        //actual title comes from the browser
         String actualTitle= driver.getTitle();
 
-        if(actualTitle.equals(expectedTitle)){
+        if (actualTitle.equals(expectedTitle)){
             System.out.println("Title is as expected. Verification PASSED!");
         }else{
             System.out.println("Title is NOT as expected. Verification FAILED!");

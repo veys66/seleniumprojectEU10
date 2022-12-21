@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class T2_LinkTextPractice {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
 
         //TC #2: Back and forth navigation
@@ -24,6 +24,8 @@ public class T2_LinkTextPractice {
         //driver.findElement(By.linkText("A/B Testing")).click();
         WebElement abTestLink= driver.findElement(By.linkText("A/B Testing"));
         abTestLink.click();
+
+        Thread.sleep(2000);
 
         //4- Verify title is:
         //Expected: No A/B Test

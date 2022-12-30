@@ -11,7 +11,7 @@ public class T2_LinkTextPractice {
 
 
         //TC #2: Back and forth navigation
-        //1- Open a chrome browser
+        //1- Open a Chrome browser
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();

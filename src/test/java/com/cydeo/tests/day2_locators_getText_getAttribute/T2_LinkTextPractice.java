@@ -19,7 +19,7 @@ public class T2_LinkTextPractice {
         //2- Go to: https://practice.cydeo.com
         driver.get("https://practice.cydeo.com");
 
-        //3- Click to A/B Testing from top of the list.
+         //3- Click to A/B Testing from top of the list.
         //Thread.sleep(2000);
         //driver.findElement(By.linkText("A/B Testing")).click();
         WebElement abTestLink= driver.findElement(By.linkText("A/B Testing"));

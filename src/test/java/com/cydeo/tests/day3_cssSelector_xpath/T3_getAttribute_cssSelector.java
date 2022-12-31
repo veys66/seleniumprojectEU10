@@ -1,7 +1,9 @@
 package com.cydeo.tests.day3_cssSelector_xpath;
 
 import com.cydeo.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class T3_getAttribute_cssSelector {
     public static void main(String[] args) {
@@ -17,7 +19,19 @@ public class T3_getAttribute_cssSelector {
 
         //3- Verify “Log in” button text is as expected:
         //Expected: Log In
+        //WebElement signButton= driver.findElement(By.className("login-btn"));
+        //LOCATING THE SAME WEB ELEMENT USING DIFFERENT ATTRIBUTE VALUES
+        //                    tagname[attribute='value']
+        //                     input[class='login-btn']
 
+        //LOCATED USING CLASS ATTRIBUTE
+        //WebElement signButton= driver.findElement(By.cssSelector("input[class='login-btn']"));
+
+        //LOCATED USING TYPE ATTRIBUTE
+        //WebElement signButton= driver.findElement(By.cssSelector("input[type='submit']"));
+
+        //LOCATED USING VALUE ATTRIBUTE
+        WebElement signButton= driver.findElement(By.cssSelector("input[value='Log In']"));
 
 
 

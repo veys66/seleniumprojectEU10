@@ -33,13 +33,18 @@ public class T3_getAttribute_cssSelector {
         //LOCATED USING VALUE ATTRIBUTE
         WebElement signButton= driver.findElement(By.cssSelector("input[value='Log In']"));
 
+        String expectedButtonText= "Log In";
 
+        //Getting the value of the attribute "value"
+        String actualButtonText=signButton.getAttribute("value");
 
+        System.out.println("actualButtonText = " + actualButtonText);
 
-
-
-
-
+        if(actualButtonText.equals(expectedButtonText)){
+            System.out.println("Log In button text verification passed!");
+        }else{
+            System.out.println("Log In button text verification failed!");
+        }
 
 
     }

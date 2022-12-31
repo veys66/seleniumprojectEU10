@@ -18,9 +18,9 @@ public class T2_getText_getAttribute {
 
         //3- Verify “remember me” label text is as expected:
         //Expected: Remember me on this computer
-        WebElement remerberMeLabel = driver.findElement(By.className("login-item-checkbox-label"));
+        WebElement rememberMeLabel = driver.findElement(By.className("login-item-checkbox-label"));
         String expectedRememberMeLabel="Remember me on this computer";
-        String actualRememberMeLabel=remerberMeLabel.getText();
+        String actualRememberMeLabel=rememberMeLabel.getText();
 
         if(actualRememberMeLabel.equals(expectedRememberMeLabel)){
             System.out.println("Label verification PASSED!");
@@ -30,6 +30,17 @@ public class T2_getText_getAttribute {
 
         //4- Verify “forgot password” link text is as expected:
         //Expected: Forgot your password?
+        WebElement forgotPasswordLink = driver.findElement(By.className("login-link-forgot-pass"));
+
+        String expectedForgotPasswordLinkText="Forgot your password?";
+        String actualForgotPasswordLinkText=forgotPasswordLink.getText();
+
+        if(actualForgotPasswordLinkText.equals(expectedForgotPasswordLinkText)){
+            System.out.println("Forgot password link verification PASSED!");
+        }else{
+            System.out.println("Forgot password link verification FAILED!!!");
+        }
+
         //5- Verify “forgot password” href attribute’s value contains expected:
         //Expected: forgot_password=yes
 

@@ -16,7 +16,7 @@ public class T4_cssSelector_getText {
         driver.get("https://login1.nextbasecrm.com/?forgot_password=yes");
 
         //3- Verify “Reset password” button text is as expected:
-        //Expected: Reset password
+        // Expected: Reset password
         //                      tagname[attribute='value']
         //locating reset password button using class attribute and its value
         //WebElement resetPasswordButton= driver.findElement(By.cssSelector("button[class='login-btn']"));

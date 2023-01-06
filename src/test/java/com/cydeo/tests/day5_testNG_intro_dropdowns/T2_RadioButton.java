@@ -1,7 +1,9 @@
 package com.cydeo.tests.day5_testNG_intro_dropdowns;
 
 import com.cydeo.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,10 +19,12 @@ public class T2_RadioButton {
         driver.get("https://practice.cydeo.com/radio_buttons ");
 
         //3. Click to “Hockey” radio button
+        WebElement hockeyRadioBtn= driver.findElement(By.xpath("//input[@id='hockey']"));
 
-
+        hockeyRadioBtn.click();
 
         //4. Verify “Hockey” radio button is selected after clicking.
+
 
 
 

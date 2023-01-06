@@ -2,6 +2,7 @@ package com.cydeo.tests.day5_testNG_intro_dropdowns;
 
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -32,8 +33,19 @@ public class T1_StateElementRefEx {
         System.out.println("deleteButton.isDisplayed() = " + deleteButton.isDisplayed());
 
         //5. Click to “Delete” button.
+        deleteButton.click();
 
         //6. Verify “Delete” button is NOT displayed after clicking.
+
+        try{
+            System.out.println("deleteButton.isDisplayed() = " + deleteButton.isDisplayed());
+        }catch (StaleElementReferenceException e){
+            System.out.println("-->StaleElementReferenceException exception is thrown");
+            System.out.println("-->This means the web element is completely deleted from the page");
+            System.out.println("deleteButton.isDisplayed() = false");
+        }
+
+
         //USE XPATH LOCATOR FOR ALL WEBELEMENT LOCATORS
 
 

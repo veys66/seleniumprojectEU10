@@ -27,6 +27,8 @@ public class T3_RadioButton_cont {
 
         clickAndVerifyRadioButton(driver, "sport", "football");
 
+        clickAndVerifyRadioButton(driver, "color", "yellow");
+
     }
 
 

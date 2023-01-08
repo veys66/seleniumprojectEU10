@@ -18,7 +18,7 @@ public class T3_RadioButton_cont {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         //2. Go to https://practice.cydeo.com/radio_buttons
-        driver.get("https://practice.cydeo.com/radio_buttons ");
+        driver.get("https://practice.cydeo.com/radio_buttons");
 
         //Locate name='sports' radio buttons and store them in a List of Web Element
         List<WebElement> sportRadioButtons = driver.findElements(By.name("sport"));

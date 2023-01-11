@@ -44,6 +44,7 @@ public class T1_WindowHandling {
                 break;
             }
         }
+
         //5. Assert: Title contains “Etsy”
         String actualTitle=driver.getTitle();
         String expectedInTitle="Etsy";

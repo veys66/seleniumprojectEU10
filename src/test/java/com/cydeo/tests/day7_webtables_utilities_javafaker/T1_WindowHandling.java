@@ -38,6 +38,10 @@ public class T1_WindowHandling {
             driver.switchTo().window(each);
 
             System.out.println("Current URL: " + driver.getCurrentUrl());
+
+            if(driver.getCurrentUrl().contains("etsy")){
+                break;
+            }
         }
         //5. Assert: Title contains “Etsy”
 

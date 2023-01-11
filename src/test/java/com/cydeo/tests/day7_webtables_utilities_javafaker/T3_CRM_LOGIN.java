@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class T3_CRN_LOGIN {
+public class T3_CRM_LOGIN {
 
     public WebDriver driver;
 

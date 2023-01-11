@@ -18,6 +18,11 @@ public class BrowserUtils {
     }
 
 
+    public static void switchWindowAndVerifyTitle(){
+
+    }
+
+
 
 
 

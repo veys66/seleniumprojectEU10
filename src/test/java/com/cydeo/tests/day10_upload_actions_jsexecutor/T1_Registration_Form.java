@@ -2,6 +2,7 @@ package com.cydeo.tests.day10_upload_actions_jsexecutor;
 
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -15,8 +16,13 @@ public class T1_Registration_Form {
         //Driver.getDriver()--> driver.get(url)
         Driver.getDriver().get(ConfigurationReader.getProperty("registration.form.url"));
 
+        //Create JavaFaker object
+        Faker faker= new Faker();
+
         //3. Enter first name
+        //WebElement inputFirstName = driver.findElement(By.xpath("//input[@name='firstname']"));
         WebElement inputFirstName = Driver.getDriver().findElement(By.xpath("//input[@name='firstname']"));
+        inputFirstName.sendKeys(faker.name().firstName());
 
         //4. Enter last name
         //5. Enter username

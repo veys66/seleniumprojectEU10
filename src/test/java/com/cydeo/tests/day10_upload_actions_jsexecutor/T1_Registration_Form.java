@@ -5,6 +5,7 @@ import com.cydeo.utilities.Driver;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class T1_Registration_Form {
@@ -55,9 +56,14 @@ public class T1_Registration_Form {
         inputGender.click();
 
         //10. Enter date of birth
-        WebElement input=Driver.getDriver().findElement(By.xpath("//input[@name='birthday']"));
+        WebElement inputBirthday=Driver.getDriver().findElement(By.xpath("//input[@name='birthday']"));
+        //faker.number().numberBetween(2004, 1920);
+        inputBirthday.sendKeys("03/08/2000");
 
         //11. Select Department/Office
+        Select departmentDropdown=new Select(Driver.getDriver().findElement(By.xpath("//select[@name='department']")));
+        departmentDropdown.selectByIndex(faker.number().numberBetween(1,9));
+
         //12. Select Job Title
         //13. Select programming language from checkboxes
         //14. Click to sign up button

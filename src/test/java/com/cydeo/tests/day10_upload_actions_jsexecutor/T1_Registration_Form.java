@@ -51,7 +51,12 @@ public class T1_Registration_Form {
         inputPhone.sendKeys(faker.numerify("###-###-####"));
 
         //9. Select a gender from radio buttons
+        WebElement inputGender=Driver.getDriver().findElement(By.xpath("//input[@value='female']"));
+        inputGender.click();
+
         //10. Enter date of birth
+        WebElement input=Driver.getDriver().findElement(By.xpath("//input[@name='birthday']"));
+
         //11. Select Department/Office
         //12. Select Job Title
         //13. Select programming language from checkboxes

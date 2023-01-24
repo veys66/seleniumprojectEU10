@@ -29,11 +29,11 @@ public class T3_Actions_Hover {
 
         //2. Hover over to first image
         BrowserUtils.sleep(2);
-        actions.moveToElement(img1);
+        actions.moveToElement(img1).perform();
 
         //3. Assert:
         //a. “name: user1” is displayed
-        //Assert.assertTrue(user1.isDisplayed());
+        Assert.assertTrue(user1.isDisplayed());
 
         //4. Hover over to second image
         BrowserUtils.sleep(2);
@@ -45,7 +45,7 @@ public class T3_Actions_Hover {
 
         //6. Hover over to third image
         BrowserUtils.sleep(2);
-        actions.moveToElement(img3);
+        actions.moveToElement(img3).perform();
 
         //7. Confirm:
         //a. “name: user3” is displayed

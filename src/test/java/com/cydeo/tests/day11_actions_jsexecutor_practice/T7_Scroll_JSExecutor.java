@@ -20,6 +20,8 @@ public class T7_Scroll_JSExecutor {
         WebElement cydeoLink=Driver.getDriver().findElement(By.linkText("CYDEO"));
         WebElement homeLink=Driver.getDriver().findElement(By.linkText("Home"));
 
+        //Down-casting our driver type to JavascriptExecutor,
+        //so we are able to use the methods coming from that interface
         JavascriptExecutor js=(JavascriptExecutor) Driver.getDriver();
 
         //3- Scroll down to “Cydeo” link
@@ -28,7 +30,8 @@ public class T7_Scroll_JSExecutor {
 
         //4- Scroll up to “Home” link
         BrowserUtils.sleep(2);
-        js.executeScript("arguments[1].scrollIntoView(true)", cydeoLink, homeLink);
+        //js.executeScript("arguments[1].scrollIntoView(true)", cydeoLink, homeLink);
+        js.executeScript("arguments[1].scrollIntoView(true)", homeLink);
         //5- Use below provided JS method only
 
         //JavaScript method to use : arguments[0].scrollIntoView(true)

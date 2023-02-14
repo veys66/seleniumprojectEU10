@@ -41,8 +41,12 @@ public class POMPractices {
 
         libraryLoginPage.inputUsername.sendKeys("somethingwrong");
 
+        libraryLoginPage.signInButton.click();
+
         //4- Verify expected error is displayed:
         //Expected: Please enter a valid email address.
+
+        Assert.assertTrue(libraryLoginPage.enterValidEmailErrorMessage.isDisplayed());
 
 
     }

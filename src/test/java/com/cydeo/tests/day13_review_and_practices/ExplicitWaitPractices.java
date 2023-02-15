@@ -16,22 +16,17 @@ public class ExplicitWaitPractices {
     public void setupMethod(){
         Driver.getDriver().get("https://practice.cydeo.com/dynamic_controls");
         dynamicControlsPage = new DynamicControlsPage();
-
     }
-
     @Test
     public void remove_button_test(){
         //3- Click to “Remove” button
         dynamicControlsPage.removeButton.click();
 
-
         //4- Wait until “loading bar disappears”
         //Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         //WebDriverWait wait= new WebDriverWait(Driver.getDriver(), 10);
         //wait.until(ExpectedConditions.invisibilityOf(dynamicControlsPage.loadingBar));
-
         BrowserUtils.waitForInvisibilityOf(dynamicControlsPage.loadingBar);
-
 
         //5- Verify:
         //a. Checkbox is not displayed

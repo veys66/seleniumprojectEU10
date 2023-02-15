@@ -1,8 +1,10 @@
 package com.cydeo.tests.day12_pom_design_explicit_wait;
 
+import com.cydeo.pages.DynamicLoad7Page;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class WebDriveWaitPractices {
@@ -21,8 +23,14 @@ public class WebDriveWaitPractices {
         //use the "wait" object to create our expected condition
         wait.until(ExpectedConditions.titleIs("Dynamic title"));
 
+        //Create object of DynamicLoad7Page to reach and assert web elements
+        DynamicLoad7Page dynamicLoad7Page= new DynamicLoad7Page();
+
         //3. Assert: Message “Done” is displayed.
+        Assert.assertTrue(dynamicLoad7Page.doneMessage.isDisplayed());
+
         //4. Assert: Image is displayed.
+
 
     }
 
